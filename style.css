@@ -1,0 +1,506 @@
+/* import fonts */
+@import url("https://fonts.googleapis.com/css2?family=Arvo&family=Comic+Neue&display=swap");
+
+::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+
+/* Most Used Colors */
+:root {
+  --primary: #4effaa;
+  --background: #1f2937;
+  --secondary: #c4c4c416;
+}
+html {
+  scroll-behavior: smooth;
+}
+button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  width: fit-content;
+  cursor: pointer;
+}
+button a {
+  text-decoration: none;
+}
+body {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: Comic Neue;
+  background-color: var(--background);
+  background-image: radial-gradient(#ffffff96 1px, transparent 1px);
+  background-size: 120px 120px;
+}
+/* navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem 0;
+}
+.brand-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  font-family: Arvo, serif;
+}
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding: 0 2rem;
+}
+
+nav a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 2rem;
+}
+nav a:hover {
+  color: #ffffff96;
+}
+
+.a {
+  width: 12rem;
+}
+
+.action {
+  outline: none;
+  border: none;
+  font-size: 1.25rem;
+  background-color: var(--primary);
+  margin: 1rem 0;
+  width: 12rem;
+  color: #1f2937;
+  transition: all 1s;
+  border: var(--primary) solid 3px;
+}
+.action:hover {
+  background-color: #1f2937;
+  color: white;
+  cursor: pointer;
+  border: 3px solid white;
+}
+
+/* Intro section */
+#landing {
+  width: 100vw;
+}
+.row {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+.intro {
+  flex: 0.4;
+  padding: 2rem;
+  display: flex;
+  margin: 0 3rem;
+  flex-direction: column;
+}
+.intro-text {
+  font-family: Arvo;
+  font-weight: bold;
+  font-size: 3rem;
+  letter-spacing: 1px;
+  line-height: 4.5rem;
+}
+.occupation {
+  color: var(--primary);
+}
+.project-btn {
+  outline: none;
+  background-color: var(--background);
+  border: var(--primary) solid 3px;
+  font-size: 1.25rem;
+  width: 12rem;
+  margin: 1rem 0;
+  color: white;
+  transition: all 1s;
+}
+.project-btn:hover {
+  background-color: white;
+  border: 3px solid white;
+  color: #1f2937;
+}
+
+.hero {
+  flex: 0.6;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.undraw {
+  height: 35vh;
+}
+.triangle {
+  width: 40vw;
+  height: 70vh;
+  position: absolute;
+  z-index: -100;
+  left: -10vw;
+  top: 25vh;
+}
+.vector {
+  position: absolute;
+  z-index: -100;
+  height: 27rem;
+  right: 10vw;
+}
+
+@keyframes animated {
+  0% {
+    transform: translate(0, -10);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+    transform: translate(0, 10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, -10);
+  }
+}
+
+.fa-chevron-down {
+  transition: 1s;
+  position: relative;
+  color: var(--primary);
+  animation-name: animated;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+#About {
+  margin: 2rem 0;
+  width: 100vw;
+}
+
+.title {
+  font-family: Arvo;
+  display: flex;
+  height: 5rem;
+  margin: 0 0 2rem;
+  justify-content: center;
+  font-size: 2rem;
+  position: relative;
+}
+
+.title ::after {
+  position: absolute !important;
+  width: 4rem;
+  height: 5px;
+  background-color: var(--primary);
+  content: "";
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  margin: 0 auto;
+}
+.para {
+  text-align: left;
+  margin: 3rem auto 0;
+  line-height: 1.5rem;
+  padding: 1.25rem;
+  width: 70vw;
+  font-size: 1.215rem;
+  background-color: var(--secondary);
+  border-radius: 1rem;
+}
+.card {
+  display: flex;
+  margin: 1rem 3rem;
+  padding: 1.5rem;
+  width: 20rem;
+  line-height: 1.25rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  background-color: var(--secondary);
+  border-radius: 1rem;
+  border: var(--primary) solid 2px;
+}
+
+.fa-solid {
+  color: var(--primary);
+}
+.hobbies {
+  margin: 2rem;
+}
+
+#Features {
+  padding: 2rem;
+}
+#Features .right {
+  flex-wrap: wrap-reverse;
+}
+.feature {
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.feature div {
+  width: 30rem;
+  max-width: 80vw;
+  margin: 1rem 3rem;
+  display: flex;
+}
+.feature-img img {
+  width: 30rem;
+  max-width: 80vw;
+}
+.feature-content {
+  max-width: 30rem;
+  display: flex;
+  flex-direction: column;
+}
+.feature .feature-title {
+  font-family: Arvo;
+  font-weight: bold;
+  font-size: 1.75rem;
+  color: white;
+}
+.feature p {
+  color: #9ca3af;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+#Project {
+  padding: 2rem;
+  text-align: center;
+}
+.technologies {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.technologies div {
+  margin: 1rem;
+  background-color: var(--secondary);
+  border-radius: 0.5rem;
+  width: 5rem;
+  padding: 1rem 1rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.technologies div i {
+  color: var(--primary);
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#Prev {
+  left: 2vw;
+  transform: rotate(90deg);
+}
+.btns {
+  position: absolute;
+  animation: none;
+  transition: 0.5s;
+}
+.btns:hover {
+  cursor: pointer;
+  color: #4effaa96;
+}
+#Next {
+  animation: none;
+  transform: rotate(-90deg);
+  position: absolute;
+  right: 2vw;
+}
+.projects .active {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 60vw;
+  margin: 2rem;
+  padding: 0 2rem 0 0;
+  overflow: hidden;
+  background-color: var(--secondary);
+  border-radius: 1.25rem;
+}
+.active * {
+  animation: animate 1.5s 1;
+}
+.project {
+  display: none;
+}
+i {
+  color: var(--primary);
+}
+.project .img {
+  height: 20rem;
+  width: 30vw;
+}
+.project .img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.project-content {
+  flex: 0.75;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+}
+.project-content .heading {
+  display: flex;
+  align-items: center;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
+.project-content div * {
+  margin-right: 1rem;
+}
+.project-content .tag {
+  padding: 0.5rem 1rem;
+  text-align: center;
+  background-color: var(--secondary);
+  border: var(--primary) solid 1px;
+  border-radius: 1rem;
+}
+
+.project-content .tags {
+  display: flex;
+}
+
+.project p {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+}
+
+.project a {
+  margin: 0;
+}
+
+form {
+  font-size: 1.125rem;
+  background-color: var(--secondary);
+  padding: 1rem;
+  margin: 2rem auto;
+  border-radius: 1.25rem;
+  width: 30rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  max-width: 80vw;
+  flex-wrap: wrap;
+}
+form * {
+  margin: 0.5rem 0.5rem;
+}
+form input {
+  outline: none;
+  padding: 0.5rem 1rem;
+  border: var(--primary) 1px solid;
+  width: 10rem;
+  color: #ffffff96;
+  border-radius: 0.5rem;
+  background-color: var(--secondary);
+}
+.textarea {
+  width: 100%;
+}
+form textarea {
+  padding: 1rem;
+  width: 80%;
+  margin: 0.5rem;
+  outline: none;
+  border: var(--primary) 1px solid;
+  color: #ffffff96;
+  border-radius: 0.5rem;
+  background-color: var(--secondary);
+}
+form .action {
+  font-size: 1.125rem;
+  padding: 0.5rem 1rem;
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #000000;
+}
+
+.footer .flex-hor {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.footer .copywrite {
+  letter-spacing: 4px;
+  font-family: Arvo;
+}
+.footer .colored {
+  color: var(--primary);
+}
+
+@media only screen and (max-width: 768px) {
+  .hero {
+    display: none;
+  }
+  .img {
+    display: none;
+  }
+  .intro {
+    flex: 1;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+  }
+  .projects .active {
+    padding: 2rem;
+  }
+  .project-content {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .intro-text {
+    margin: 0.5rem;
+    flex: 1;
+  }
+  nav {
+    display: none;
+  }
+  .btns {
+    display: none;
+  }
+  .triangle {
+    top: 0vh;
+  }
+  form div {
+    width: 100%;
+  }
+  form input {
+    width: 80%;
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: translateX(75px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
